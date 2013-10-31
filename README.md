@@ -23,7 +23,7 @@ Run:
 
     3) Update your configuration settings in file ./conf/hbase-site.xml by pointing to source & destination zookeeper quorum 
 
-    4) java -cp ./conf:./lib/hbase-common-0.96.0.jar:./lib/hbase-0.94-jarjar.jar:./lib/*:./hbase-replication-bridge-1.0.jar com.hortonworks.hbase.replication.bridge.ReplicationBridgeServer
+    4) java -cp ./conf:./lib/hbase-common-0.96.0-hadoop2.jar:./lib/hbase-0.94-jarjar.jar:./lib/*:./hbase-replication-bridge-1.0.jar com.hortonworks.hbase.replication.bridge.ReplicationBridgeServer
     Notes: You have to keep the above class path loading order otherwise you will get some class not found errors.
 
 When ReplicationBridgeServer starts, it creates two znodes /hbase96/rs/<Server Name> and /hbase96/hbaseid in source zookeeper cluster. After the bridge server starts, you can follow up http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/replication/package-summary.html#requirements to setup hbase replication between your 0.94 cluster and the bridge servers. 
