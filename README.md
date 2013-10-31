@@ -11,13 +11,18 @@ Compile:
     mvn clean install -DskipTests
 
 Make tarball:
+
     mvn assembly:single -DskipTests
 
 
 Run: 
+
     1) tar xvzf  hbase-replication-bridge-1.0.tar.gz
+
     2) under folder hbase-replication-bridge-1.0
+
     3) Update your configuration settings in file ./conf/hbase-site.xml by pointing to source & destination zookeeper quorum 
+
     4) java -cp ./conf:./lib/hbase-common-0.96.0.jar:./lib/hbase-0.94-jarjar.jar:./lib/*:./hbase-replication-bridge-1.0.jar com.hortonworks.hbase.replication.bridge.ReplicationBridgeServer
     Notes: You have to keep the above class path loading order otherwise you will get some class not found errors.
 
