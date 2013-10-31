@@ -1,0 +1,1 @@
+rule org.apache.hadoop.hbase.** org.apache.hadoop.hbase94.@1
