@@ -40,25 +40,6 @@
         </configuration>
       </plugin>
       <plugin>
-        <groupId>com.googlecode.addjars-maven-plugin</groupId>
-        <artifactId>addjars-maven-plugin</artifactId>
-        <version>1.0.5</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>add-jars</goal>
-            </goals>
-            <configuration>
-              <resources>
-                <resource>
-                  <directory>${basedir}/lib</directory>
-                </resource>
-              </resources>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
         <configuration>
@@ -78,6 +59,15 @@
             <descriptor>src/assembly/all.xml</descriptor>
           </descriptors>
         </configuration>
+        <executions>
+          <execution>
+            <id>tarball</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
@@ -200,6 +190,13 @@
        <groupId>org.apache.hadoop</groupId>
        <artifactId>hadoop-auth</artifactId>
        <version>${hadoop-two.version}</version>
+     </dependency>
+     <dependency>
+       <groupId>org.apache.hbase94</groupId>
+       <artifactId>hbase</artifactId>
+       <version>0.94.10</version>
+       <scope>system</scope>
+       <systemPath>${project.basedir}/lib/hbase-0.94-jarjar.jar</systemPath>
      </dependency>
 </dependencies>
 
