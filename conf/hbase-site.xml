@@ -40,4 +40,8 @@
     <name>hbase.bridge.source.zookeeper.quorum</name>
     <value>source cluster zookeeper quorum</value>
   </property>
+  <property>
+    <name>hbase.bridge.server.root.znode</name>
+    <value>/hbase98</value>
+  </property>
 </configuration>

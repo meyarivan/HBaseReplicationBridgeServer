@@ -98,7 +98,7 @@
     <stax-api.version>1.0.1</stax-api.version>
     <thrift.version>0.8.0</thrift.version>
     <zookeeper.version>3.4.5</zookeeper.version>
-    <hbase-client.version>0.96.0-hadoop2</hbase-client.version>
+    <hbase-client.version>0.98.0-hadoop2</hbase-client.version>
     <htrace.version>2.01</htrace.version>
     <netty.version>3.6.6.Final</netty.version>
     <hadoop-two.version>2.2.0</hadoop-two.version>
